@@ -1,6 +1,6 @@
 <div class="container research-container">
   <h3>{{ site.research_title | default: "Research" }}</h3>
   {% for research in site.data.research %}
-    {% include {{ research.layout | default: 'left' | append: ".html" }} item=research %}
+    {% include {{ research.layout | default: 'research_layout' | append: ".html" }} item=research %}
   {% endfor %}
 </div>
