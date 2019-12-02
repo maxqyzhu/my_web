@@ -1,6 +1,6 @@
 <div class="row clearfix layout layout-left">
   <div class="col-xs-12 col-sm-12 col-md-12 col-print-12">
-    {%- if include.item.name -%}<h4><b>{{ include.item.name }}</b><h4>{%- endif -%}
+    {%- if include.item.name -%}<p><h5><b>{{ include.item.name }}</b><h5></p>{%- endif -%}
     {%- if include.item.authors -%}<h5>{{ include.item.authors }}</h5>{%- endif -%}
     {%- if include.item.link -%}
       {% include a.html href=include.item.link class="link" %}{{ include.item.link }}</a>
@@ -9,6 +9,6 @@
     {%- if include.item.quote -%}
       <p class="quote">{{ include.item.quote }}</p>
     {%- endif -%}
-    {%- if include.item.description -%}<h5>{{ include.item.description }}</h5>{%- endif -%}
+    {{ include.item.description | strip | markdownify }}
   </div>
 </div>
