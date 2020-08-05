@@ -1,7 +1,7 @@
 <div class="row clearfix layout layout-left">
   <div class="col-xs-12 col-sm-12 col-md-12 col-print-12">
-    {%- if include.item.name -%}<p><h3><b>{{ include.item.name }}</b></h3></p>{%- endif -%}
-    {%- if include.item.conference -%}<p><h4><b>{{ include.item.conference }}</b></h4></p>{%- endif -%}
+    {%- if include.item.name -%}<p><h4><b>{{ include.item.name }}</b></h4></p>{%- endif -%}
+    {%- if include.item.conference -%}<h4>{{ include.item.conference }}</h4>{%- endif -%}
     {%- if include.item.authors -%}<h4>{{ include.item.authors }}</h4>{%- endif -%}
     {%- if include.item.link -%}
       {% include a.html href=include.item.link class="link" %}{{ include.item.link }}</a>
